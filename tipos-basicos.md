@@ -51,7 +51,7 @@ shortDescription = "Doblar a la "izquierda".
 
 > Consejo: Siempre trata de mantener consistencia en el uso de la comilla. Define un estilo y apegate a el.
 
-### Atención con JSON
+### Si usas JSON...
 Si como parte de tu proyecto utilizas JSON, cabe señalar que en el sentido estricto, los strings en JSON se representan con comillas dobles. Claro, muchas librerias utilizan solo comillas simples, pero ten esto en cosideración este hecho al momento crear un API e implementar el estándar JSON.
 
 ### Template Strings
@@ -62,7 +62,7 @@ var rectangle = { height: 20, width: 10 };
 var areaMessage = `Rectangle area is ${rectangle.height * rectangle.width}`;
 ```
 
-Para poder hacer uso de los *template string* debemos limitar el string o la expresión utilando (`). Dentro de los limitadores `${}` podemos llamar variables y ejecutar diferentes tipos de expresiones.
+Para poder hacer uso de los *template string* debemos limitar el string o la expresión utilando el caracter backtick (\`). Dentro de los limitadores `${}` podemos llamar variables y ejecutar diferentes tipos de expresiones.
 
 ## Array
 
