@@ -55,6 +55,14 @@ shortDescription = "Doblar a la "izquierda".
 Si como parte de tu proyecto utilizas JSON, cabe señalar que en el sentido estricto, los strings en JSON se representan con comillas dobles. Claro, muchas librerias utilizan solo comillas simples, pero ten esto en cosideración este hecho al momento crear un API e implementar el estándar JSON.
 
 ### Template Strings
+Con la implementacion del estándar ECMAScript 6 se han logrado mejorar la manera de trabajar con cadenas (strings) a través de la opción de *template strings*. Esta peculiar manera de trabajar con los string nos brinda de posilidad de exter el funcionamiento de los mismos a través de expresiones que nos pueden ayudar grandemente a organizar y reducir la cantidad de código en nuestro proyecto. Veamos un ejemplo: 
+
+```typescript
+var rectangle = { height: 20, width: 10 };
+var areaMessage = `Rectangle area is ${rectangle.height * rectangle.width}`;
+```
+
+Para poder hacer uso de los *template string* debemos limitar el string o la expresión utilando (`). Dentro de los limitadores `${}` podemos llamar variables y ejecutar diferentes tipos de expresiones.
 
 ## Array
 
