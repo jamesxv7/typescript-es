@@ -27,11 +27,34 @@ var savings: number = 23.47
 ## String
 Para representar tipos de datos de texto se utiliza el tipo *string*.TypeScript, al igual que JavaScript utiliza la comilla double (") o sencilla (') para describir un elemento tipo *string*.
 
+```typescript
+// String
+var name: string = "Jaime";
+var lastName: string = "Olmo";
+
+// Como concadenar dos strings
+alert(name + " " + lastName)
+
+// Cadena de escape 
+var shortDescription: string = "Doblar a la 'derecha'."
+shortDescription = "Doblar a la \"izquierda\"."
+shortDescription = 'Continuar a la \'izquierda\'.'
+
+// Como concadenar strings y variables tipo number
+shortDescription = "Su edad es " + age + " años.";
+alert(shortDescription);
+
+/* Errores
+shortDescription = "Doblar a la "izquierda".
+ */
+ ```
+
 > Consejo: Siempre trata de mantener consistencia en el uso de la comilla. Define un estilo y apegate a el.
 
-> Consejo: Si como parte de tu proyecto utilizas JSON, cabe señalar que en el sentido estricto, los strings en JSON se representan con comillas dobles. Claro, muchas librerias utilizan solo comillas simples, pero ten esto en cosideración este hecho al momento crear un API e implementar el estándar JSON.
+### Atención con JSON
+Si como parte de tu proyecto utilizas JSON, cabe señalar que en el sentido estricto, los strings en JSON se representan con comillas dobles. Claro, muchas librerias utilizan solo comillas simples, pero ten esto en cosideración este hecho al momento crear un API e implementar el estándar JSON.
 
-
+### Template Strings
 
 ## Array
 
