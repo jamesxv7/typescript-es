@@ -24,11 +24,10 @@ http://www.hanselman.com/blog/JavaScriptisAssemblyLanguagefortheWebPart2Madnesso
 
 ## ¿Que es TypeScript?
 
-TypeScript es un lenguage de programación de codigo abierto desarrollado por Microsoft que al ser compilado genera codigo en Javascript. Has leido correctamente, "lenguage de programación de codigo abierto desarrollado por Microsoft". Ya de por si estas características son más que suficientes para levantar todo tipo de interés. 
+TypeScript es un lenguage de programación de codigo abierto desarrollado por Microsoft que al ser compilado genera codigo en Javascript. Has leido correctamente, "lenguage de programación de código abierto desarrollado por Microsoft". Ya de por si estas características son más que suficientes para levantar todo tipo de interés. En propias palabras del documento de especificacion, TypeScript fue diseñado para cubrir las necesidades de los desarrolladores que construyen y mantienen aplicaciones enemormes usando JavaScript. TypeScript ayuda al equipo de desarrollo a definir interfaces entre diferentes componentes de software y a comprender mejor el comportamiento de las librerías existentes en JavaScript.
 
-practicamente code is compiled into plain JavaScript, which means it can run in any web browser or on a server running technology such as Node.js.
+TypeScript sencillamente compila código a JavaScript. Podemos decir que TypeScript son ambas cosas, un lenguage y un serie de herramientas que generan un codigo de JavaScript de cálidad y de fácil lectura y análisis. De esta manera el codigo generado a traves del compilador de TypeScript puede ser ejecutado en cualquier navedor y en el servidor a traves de Node.js.
 
-TypeScript is both a language and a set of tools to generate JavaScript.
 
 ## ¿Qué problemas resuelve TypeScript?
 
