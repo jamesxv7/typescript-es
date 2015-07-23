@@ -7,7 +7,7 @@ var isDone: boolean = false;
 ```
 La belleza de trabajar con un sistema que permite strong types es que si utilizamos como base en  codigo anterior el compilador de TypeScript nos podra corregir en tiempo real de errors que podamos generar en nuestro codigo. Por ejemplo: 
 
-```typescrip
+```typescript
 // Mostrará un error indicando ya que variable isDOne no es de tipo numérica.
 var isDone: boolean = 1;
 
