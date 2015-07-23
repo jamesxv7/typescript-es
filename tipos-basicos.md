@@ -16,8 +16,18 @@ var isDone: boolean = False;
 ```
 
 ## Number
+Al igual que en JavaScript, toda data numérica en TypeScript es definida como flotante y se denomina como *number*. En JavaScript no existe cosa tal como tipo *float*. *double* o *integer*. Javascript hace distinción entre valores enteros o punto-flotante, caracteristica que TypeScript muy hereda. Todas las variables del siguiente ejemplo son de tipo *number*.
+
+```typescript
+var age: number = 33;
+var imageId: number = 2844349;
+var savings: number = 23.47
+```
 
 ## String
+Para representar tipos de datos de texto se utiliza el tipo *string*.TypeScript, al igual que JavaScript utiliza la comilla double (") o sencilla (') para describir un elemento tipo *string*.
+
+> Consejo: Siempre trata de mantener consistencia en el uso de la comilla. Define un estilo y apegate a el.
 
 ## Array
 
