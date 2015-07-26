@@ -65,6 +65,19 @@ var areaMessage = `Rectangle area is ${rectangle.height * rectangle.width}`;
 Para poder hacer uso de los *template string* debemos limitar el string o la expresión utilando el caracter backtick (\`). Dentro de los limitadores `${}` podemos llamar variables y ejecutar diferentes tipos de expresiones.
 
 ## Array
+Podemos crear arreglos de dos formas diferentes. Una de ellas es usando el tipo de arrglo que deseamos seguido de '[]':
+
+```typescript
+var list:number[] = [1, 2, 3];
+```
+La segunda es a traves de la forma genérica usando la expresión Array<elemType>:
+
+```typescript
+var list:Array<number> = [1, 2, 3];
+```
+> Consejo: Los arreglos puede ser de cualquier tipo - number, string e incluso array. 
+
+###Tuple Types
 
 ## Enum
 
