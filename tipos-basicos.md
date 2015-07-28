@@ -78,6 +78,13 @@ var list:Array<number> = [1, 2, 3];
 > Consejo: Los arreglos puede ser de cualquier tipo - number, string e incluso array. 
 
 ###Tuple Types
+Los arreglos tipo Tuple representan matrices en donde se puede determinar el tipo de cada inidice individualmente. Dicho de otra forma el arreglo puede contener tipos diferentes en si mismo. JavaScript de por si no provee una implementacion de este tipo de objeto pero usango TypeScript podemos emular cierto compartamiento. Veamos un ejemplo:
+```typescript
+var tupleArray: [number, string];
+tupleArray = [101, "Habitacion 1"]
+```
+
+
 
 ## Enum
 
