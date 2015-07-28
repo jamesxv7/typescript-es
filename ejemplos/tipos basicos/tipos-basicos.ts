@@ -40,12 +40,9 @@ I'll be ${ age + 1 } years old next month.`
 
 // Tuple array
 var roomInfo: [number, string];
-var rNum: number;
-var rName: string;
-roomInfo = [101, "Habitacion 1"]; 
-//roomInfo= "102", "Habitacion 2";
-roomInfo.push("201-A","Habitacion 38");
 
-
-//tupleArray =  [201, "Habitacion 38"];
-alert(roomInfo[0] + roomInfo[1]);
+roomInfo = [101, "Room 1"]; 
+// roomInfo= ["102", "Room 2"]; compiler error
+// roomInfo.push("201-A","Room 38"); for the compiler this is Ok [researching]
+roomInfo =  [201, "Habitacion 38"];
+alert(roomInfo);
