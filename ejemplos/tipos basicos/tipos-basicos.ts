@@ -46,3 +46,12 @@ roomInfo = [101, "Room 1"];
 // roomInfo.push("201-A","Room 38"); for the compiler this is Ok [researching]
 roomInfo =  [201, "Habitacion 38"];
 alert(roomInfo);
+
+interface PopulationValues extends Array<string | number | number | number> {
+	0: string;
+	1: number;
+	2: number;
+	3: number;
+}	
+
+var location:PopulationValues = ["Puerto Rico",3932392]

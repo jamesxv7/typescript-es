@@ -77,13 +77,22 @@ var list:Array<number> = [1, 2, 3];
 ```
 > Consejo: Los arreglos puede ser de cualquier tipo - number, string e incluso array. 
 
-###Tuple Types
-Los arreglos tipo Tuple representan matrices en donde se puede determinar el tipo de cada inidice individualmente. Dicho de otra forma el arreglo puede contener tipos diferentes en si mismo. JavaScript de por si no provee una implementacion de este tipo de objeto pero usango TypeScript podemos emular cierto compartamiento. Veamos un ejemplo:
+### Tuple Types
+JavaScript no posee un mecanismo para la creación de objectos tipo Tuple. TypeScript va un poco mas allá y por el momento se puede decir que provee una pseudo implementacion para objectos tipo Tuple a través de arreglos. TypeScript utiliza arreglos en donde se puede determinar el tipo de cada inidice individualmente. Dicho de otra forma el arreglo puede contener tipos diferentes en si mismo. Veamos un ejemplo:
 ```typescript
 var tupleArray: [number, string];
 tupleArray = [101, "Habitacion 1"]
 ```
 
+Si lo queremos aplicar a la creación de una interface lo podemos hacer de la siguiente manera:
+```typescript
+interface PopulationValues extends Array<string | number | number | number> {
+	0: string;
+	1: number;
+	2: number;
+	3: number;
+}
+```
 
 
 ## Enum
