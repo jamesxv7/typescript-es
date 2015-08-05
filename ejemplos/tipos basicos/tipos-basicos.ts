@@ -47,11 +47,29 @@ roomInfo = [101, "Room 1"];
 roomInfo =  [201, "Habitacion 38"];
 alert(roomInfo);
 
-interface PopulationValues extends Array<string | number | number | number> {
+interface PopulationValues extends 
+Array<string | number | number | number> {
 	0: string;
 	1: number;
 	2: number;
 	3: number;
 }	
 
-var location:PopulationValues = ["Puerto Rico",3932392]
+var countries: PopulationValues = ["PR", 3, 3.2, 4];
+
+
+//Enum
+enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};
+console.log(Days[0]);
+
+enum Days {Sat=3, Sun=1, Mon=5, Tue=2, Wed=6, Thu=4, Fri=10};
+
+var firstDay: any = Days.Sun;
+console.log(firstDay);
+firstDay = Days[1];
+console.log(firstDay);
+
+// Void
+function weatherMsg(): void {
+    console.log("El día de hoy está nublado.");
+}

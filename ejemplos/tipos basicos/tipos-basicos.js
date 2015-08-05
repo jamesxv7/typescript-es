@@ -34,3 +34,36 @@ roomInfo = [101, "Room 1"];
 // roomInfo.push("201-A","Room 38"); for the compiler this is Ok [researching]
 roomInfo = [201, "Habitacion 38"];
 alert(roomInfo);
+var countries = ["PR", 3, 3.2, 4];
+//Enum
+var Days;
+(function (Days) {
+    Days[Days["Sat"] = 0] = "Sat";
+    Days[Days["Sun"] = 1] = "Sun";
+    Days[Days["Mon"] = 2] = "Mon";
+    Days[Days["Tue"] = 3] = "Tue";
+    Days[Days["Wed"] = 4] = "Wed";
+    Days[Days["Thu"] = 5] = "Thu";
+    Days[Days["Fri"] = 6] = "Fri";
+})(Days || (Days = {}));
+;
+console.log(Days[0]);
+var Days;
+(function (Days) {
+    Days[Days["Sat"] = 3] = "Sat";
+    Days[Days["Sun"] = 1] = "Sun";
+    Days[Days["Mon"] = 5] = "Mon";
+    Days[Days["Tue"] = 2] = "Tue";
+    Days[Days["Wed"] = 6] = "Wed";
+    Days[Days["Thu"] = 4] = "Thu";
+    Days[Days["Fri"] = 10] = "Fri";
+})(Days || (Days = {}));
+;
+var firstDay = Days.Sun;
+console.log(firstDay);
+firstDay = Days[1];
+console.log(firstDay);
+// Void
+function weatherMsg() {
+    console.log("El día de hoy está nublado.");
+}
