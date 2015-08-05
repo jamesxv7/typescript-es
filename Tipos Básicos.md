@@ -50,13 +50,13 @@ shortDescription = "Doblar a la "izquierda".
  */
 ```
 
-> Consejo: Siempre trata de mantener consistencia en el uso de la comilla. Define un estilo y apegate a el.
+> Consejo: Siempre trata de mantener consistencia en el uso de la comilla. Define un estilo y apégate a el.
 
 ### Si usas JSON...
-Si como parte de tu proyecto utilizas JSON, cabe señalar que en el sentido estricto, los strings en JSON se representan con comillas dobles. Claro, muchas librerias utilizan solo comillas simples, pero ten esto en cosideración este hecho al momento crear un API e implementar el estándar JSON.
+Si como parte de tu proyecto utilizas JSON, cabe señalar que en el sentido estricto, los strings en JSON se representan con comillas dobles. Claro, muchas librerias utilizan solo comillas simples, pero ten esto en cosideración al momento crear un API e implementar el estándar JSON.
 
 ### Template Strings
-Con la implementacion del estándar ECMAScript 6 se han logrado mejorar la manera de trabajar con cadenas (strings) a través de la opción de *template strings*. Esta peculiar manera de trabajar con los string nos brinda de posilidad de exter el funcionamiento de los mismos a través de expresiones que nos pueden ayudar grandemente a organizar y reducir la cantidad de código en nuestro proyecto. Veamos un ejemplo:
+Con la implementación del estándar ECMAScript 6 se ha logrado mejorar la manera de trabajar con cadenas (*strings*) a través de la opción de *template strings*. Esta peculiar manera de trabajar con los *strings* nos brinda de posilidad de extender el funcionamiento de los mismos a través de expresiones que nos pueden ayudar grandemente a organizar y reducir la cantidad de código en nuestro proyecto. Veamos un ejemplo:
 
 ```typescript
 var rectangle = { height: 20, width: 10 };
@@ -66,13 +66,13 @@ var areaMessage = "Rectangle area is ${rectangle.height * rectangle.width}";
 Para poder hacer uso de los *template string* debemos limitar el string o la expresión utilando el caracter backtick (\`). Dentro de los limitadores `${}` podemos llamar variables y ejecutar diferentes tipos de expresiones.
 
 ## Array
-Podemos crear arreglos de dos formas diferentes. Una de ellas es usando el tipo de arrglo que deseamos seguido de `[]`:
+Podemos crear arreglos de dos formas diferentes. Una de ellas es usando el tipo de arreglo que deseamos seguido de `[]`:
 
 ```typescript
 var list:number[] = [1, 2, 3];
 ```
 
-La segunda es a traves de la forma genérica usando la expresión Array<elemType>:
+La segunda es a través de la forma genérica usando la expresión Array<elementType>:
 
 ```typescript
 var list:Array<number> = [1, 2, 3];
@@ -81,7 +81,7 @@ var list:Array<number> = [1, 2, 3];
 > Consejo: Los arreglos puede ser de cualquier tipo - number, string e incluso array. 
 
 ### Tuple Types
-JavaScript no posee un mecanismo para la creación de objectos tipo Tuple. TypeScript va un poco mas allá y por el momento se puede decir que provee una pseudo implementacion para objectos tipo Tuple a través de arreglos. TypeScript utiliza arreglos en donde se puede determinar el tipo de cada inidice individualmente. Dicho de otra forma el arreglo puede contener tipos diferentes en si mismo. Veamos un ejemplo:
+JavaScript no posee un mecanismo para la creación de objectos tipo Tuple. TypeScript va un poco mas allá y por el momento se puede decir que provee una pseudo implementación para objectos tipo Tuple a través de arreglos. TypeScript utiliza arreglos en donde se puede determinar el tipo de cada índice individualmente. Dicho de otra forma el arreglo puede contener tipos diferentes en si mismo. Veamos un ejemplo:
 
 ```typescript
 var tupleArray: [number, string];
@@ -103,7 +103,7 @@ var countries: PopulationValues = ["PR", 3, 3.2, 4];
 ```
 
 ## Enum
-Enum es un datatype especial muy similiar como se implementa en C# o en otros lenguajes donde existen datatypes especificos para trabajar mas eficientemente con listas enumeradas. Observemos el siguiente ejemplo:
+Enum es un datatype especial muy similiar a como se implementa en C# o en otros lenguajes donde existen datatypes específicos para trabajar más eficientemente con listas enumeradas. Observemos el siguiente ejemplo:
 
 ```typescript
 enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};
@@ -115,19 +115,19 @@ Por default al primer elemento de esta lista se le asigna el numero 0.
 alert(Days[0]);
 ```
 
-El mensaje mostrara el string Sat. Si deamos modificar este comportamiento lo podemos lograr con tan solo asignarle un numero al primero elemento de la lista.
+El mensaje mostrara el string Sat. Si deseamos modificar este comportamiento lo podemos lograr con tan solo asignarle un número al primer elemento de la lista.
 
 ```typescript
 enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Y por esa misma linea si deseamos alterar el orden total podemos hacer asignando un valor a cada elemento.
+Y por esa misma línea si deseamos alterar el orden total del conjunto podemos hacerlo asignando un valor a cada elemento.
 
 ```typescript
 enum Days {Sat=3, Sun=1, Mon=5, Tue=2, Wed=6, Thu=4, Fri=10};
 ```
 
-Lo bueno de este datatype es que podemos acceder el elmento ya sea por su indice o por su nombre.
+Lo bueno de este datatype es que podemos acceder el elmento ya sea por su índice o por su nombre.
 
 ```typescript 
 var firstDay: any = Days.Sun;
