@@ -1,22 +1,23 @@
 # Tipos básicos
-El término tipo de variable se refiere a la descripción de la propiedad que alojará la variable. Esto provee un mecanismo para saber que tipo de data contiene una variable. Typescript provee los siguientes tipos:
+El término tipo de variable se refiere a la descripción de la propiedad que obtendrá la variable. Esta descripción provee el mecanismo para saber de antemano que tipo de data contiene. Esto le brinda a las diferentes herramientas de desarrollo la capacidad para razonar acerca de tu código. Typescript provee los siguientes tipos:
 
 ## Boolean
+
 ```typescript
 var isDone: boolean = false;
 ```
-La belleza de trabajar con un sistema que permite strong types es que si utilizamos como base en  codigo anterior el compilador de TypeScript nos podra corregir en tiempo real de errors que podamos generar en nuestro codigo. Por ejemplo: 
+La belleza de trabajar con un sistema que permite *strong types* es que si utilizamos como ejemplo el código anterior el compilador de TypeScript nos podrá corregir en tiempo real de errors que podamos generar en nuestro código. Por ejemplo: 
 
 ```typescript
-// Mostrará un error indicando ya que variable isDOne no es de tipo numérica.
+// Mostrará un error indicando que la variable isDone no es de tipo numérica.
 var isDone: boolean = 1;
 
-// Mostrará un error indicando que no reconoce la palabra Falsa.
+// Mostrará un error indicando que no reconoce la palabra False como una propiedad booleana.
 var isDone: boolean = False;
 ```
 
 ## Number
-Al igual que en JavaScript, toda data numérica en TypeScript es definida como flotante y se denomina como *number*. En JavaScript no existe cosa tal como tipo *float*. *double* o *integer*. Javascript hace distinción entre valores enteros o punto-flotante, caracteristica que TypeScript muy hereda. Todas las variables del siguiente ejemplo son de tipo *number*.
+Al igual que en JavaScript, toda data numérica en TypeScript es definida como flotante y se denomina como *number*. En JavaScript no existen variables con tipos *float*, *double* o *integer*. Javascript no hace distinción entre valores enteros o punto-flotante, característica que TypeScript muy bien hereda (puede ser cualquiera de ellos aunque internamente, JavaScript representa todos los números como valores punto flotante). Todas las variables del siguiente ejemplo son de tipo *number*.
 
 ```typescript
 var age: number = 33;
@@ -25,7 +26,7 @@ var savings: number = 23.47
 ```
 
 ## String
-Para representar tipos de datos de texto se utiliza el tipo *string*.TypeScript, al igual que JavaScript utiliza la comilla double (") o sencilla (') para describir un elemento tipo *string*.
+Para representar tipos de datos de texto se utiliza el tipo *string*. TypeScript, al igual que JavaScript utiliza la comilla double (") o sencilla (') para describir un elemento tipo *string*.
 
 ```typescript
 // String
@@ -70,21 +71,25 @@ Podemos crear arreglos de dos formas diferentes. Una de ellas es usando el tipo 
 ```typescript
 var list:number[] = [1, 2, 3];
 ```
+
 La segunda es a traves de la forma genérica usando la expresión Array<elemType>:
 
 ```typescript
 var list:Array<number> = [1, 2, 3];
 ```
+
 > Consejo: Los arreglos puede ser de cualquier tipo - number, string e incluso array. 
 
 ### Tuple Types
 JavaScript no posee un mecanismo para la creación de objectos tipo Tuple. TypeScript va un poco mas allá y por el momento se puede decir que provee una pseudo implementacion para objectos tipo Tuple a través de arreglos. TypeScript utiliza arreglos en donde se puede determinar el tipo de cada inidice individualmente. Dicho de otra forma el arreglo puede contener tipos diferentes en si mismo. Veamos un ejemplo:
+
 ```typescript
 var tupleArray: [number, string];
 tupleArray = [101, "Habitacion 1"]
 ```
 
 Si lo queremos aplicar a la creación de una interface lo podemos hacer de la siguiente manera:
+
 ```typescript
 interface PopulationValues extends 
 Array<string | number | number | number> {
@@ -97,25 +102,33 @@ Array<string | number | number | number> {
 var countries: PopulationValues = ["PR", 3, 3.2, 4];
 ```
 
-
 ## Enum
 Enum es un datatype especial muy similiar como se implementa en C# o en otros lenguajes donde existen datatypes especificos para trabajar mas eficientemente con listas enumeradas. Observemos el siguiente ejemplo:
+
 ```typescript
 enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
+
 Por default al primer elemento de esta lista se le asigna el numero 0. 
+
 ```typescript
 alert(Days[0]);
 ```
+
 El mensaje mostrara el string Sat. Si deamos modificar este comportamiento lo podemos lograr con tan solo asignarle un numero al primero elemento de la lista.
+
 ```typescript
 enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
+
 Y por esa misma linea si deseamos alterar el orden total podemos hacer asignando un valor a cada elemento.
+
 ```typescript
 enum Days {Sat=3, Sun=1, Mon=5, Tue=2, Wed=6, Thu=4, Fri=10};
 ```
+
 Lo bueno de este datatype es que podemos acceder el elmento ya sea por su indice o por su nombre.
+
 ```typescript 
 var firstDay: any = Days.Sun;
 firstDay = Days[1];
@@ -125,9 +138,9 @@ firstDay = Days[1];
 En el ejemplo anterior vimos que utilize el tipo any para definir la variable `firstDay`. En algunas ocasiones no vamos a tener muy claro que tipo de variable necesitamos utilizar. Al hacer uso del tipo Any estamos declarando que el contenido de la varibale puede ser dinámico. Es una excelente herramienta para incorporar librerias externas a nuestros proyectos. Usando Any le estamos diciendo al compilador que no se preocupe por el tipo de esta variable. Es por eso que pude usar la variable `firstDay` para representar el valor del string y el numérico la lista `Days`.
 Cuando creamos una varible y omitimos su tipo por defualt recibe el tipo Any.
 
-
 ## Void
 Lo opuesto a Any seria el tipe Void, lo cual significa la carencia de algun tipo. Muy comunmente usado en la definicion de variables que no devuelven valor alguno.
+
 ```typescript
 function weatherMsg(): void {
     alert("El día de hoy está nublado.");
