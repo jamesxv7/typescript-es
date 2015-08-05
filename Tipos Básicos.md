@@ -45,7 +45,7 @@ shortDescription = 'Continuar a la \'izquierda\'.'
 shortDescription = "Su edad es " + age + " años.";
 alert(shortDescription);
 
-/* Errores
+/* Error
 shortDescription = "Doblar a la "izquierda".
  */
 ```
@@ -60,7 +60,7 @@ Con la implementación del estándar ECMAScript 6 se ha logrado mejorar la maner
 
 ```typescript
 var rectangle = { height: 20, width: 10 };
-var areaMessage = "Rectangle area is ${rectangle.height * rectangle.width}";
+var areaMessage = `Rectangle area is ${rectangle.height * rectangle.width}`;
 ```
 
 Para poder hacer uso de los *template string* debemos limitar el string o la expresión utilando el caracter backtick (\`). Dentro de los limitadores `${}` podemos llamar variables y ejecutar diferentes tipos de expresiones.
