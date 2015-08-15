@@ -75,7 +75,7 @@ La segunda es a traves de la forma genérica usando la expresión Array<elemType
 ```typescript
 var list:Array<number> = [1, 2, 3];
 ```
-> Consejo: Los arreglos puede ser de cualquier tipo - number, string e incluso array. 
+> Consejo: Los arreglos pueden ser de cualquier tipo - number, string e incluso array. 
 
 ###Tuple Types
 
