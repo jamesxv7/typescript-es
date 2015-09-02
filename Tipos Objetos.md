@@ -1,9 +1,28 @@
 #Tipos Objetos
-A diferencia de los tipos primitivos mencionados en la sección de Tipos Básicos los tipos Objectos son complejos en el sentido que poseen 
-
-properties, call signatures, construct signatures, and index signatures, collectively called members.
+A diferencia de los tipos primitivos mencionados en la sección de Tipos Básicos los tipos Objectos son complejos en el sentido que poseen propiedades, llamadas, constructores e indices que comunmente llamamos metodos. 
 
 ## Function
+Anadir un tipo a la funcion es bien sencillo:
+
+```typescript
+function add(x: number, y: number): number {
+    return x + y;
+}
+
+var myAdd = function(x: number, y: number): number { return x+y; };
+```
+En el ejemplo anterior la funcion `add` se ha definido tipo `number`. Podemos ver que hemos declara `x` y `y` tipo `number` tambien. TypeScript inteligentemente puede inferir que cual sera el tipo que ha devolver la funcion con tan solo evaluar las instrucciones del return. 
+
+```typescript
+// Equivalente al ejemplo anterior
+function add(x: number, y: number) {
+    return x + y;
+}
+
+var myAdd = function(x: number, y: number): number { return x+y; };
+```
+ 
+
 ## Array
 Podemos crear arreglos de dos formas diferentes. Una de ellas es usando el tipo de arreglo que deseamos seguido de `[]`:
 
