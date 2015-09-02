@@ -3,7 +3,6 @@ A diferencia de los tipos primitivos mencionados en la sección de Tipos Básico
 
 properties, call signatures, construct signatures, and index signatures, collectively called members.
 
-<<<<<<< HEAD
 ## Function
 ## Array
 Podemos crear arreglos de dos formas diferentes. Una de ellas es usando el tipo de arreglo que deseamos seguido de `[]`:
@@ -51,4 +50,3 @@ var countries: PopulationValues = ["PR", 3, 3.2, 4];
 ## Named
 =======
 Class and interface types may be generic types which have one or more type parameters. 
->>>>>>> origin/draft
